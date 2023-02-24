@@ -118,6 +118,16 @@
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -150,6 +160,85 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/25/Java-Collection%E4%B8%8EArray%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Raphael Li">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ansible">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/25/Java-Collection%E4%B8%8EArray%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">Java|Collection与Array之间的转换</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-02-25 01:28:31 / Modified: 01:48:39" itemprop="dateCreated datePublished" datetime="2023-02-25T01:28:31+08:00">2023-02-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="互相转化"><a href="#互相转化" class="headerlink" title="互相转化"></a>互相转化</h2><p><strong>总结：转换的精髓，就在于先转换成流，然后用collectors或者toArray</strong>，和for循环思路类似但是更简单，不断生成Integer并赋值，使用流快速处理。需要注意两个问题：</p>
+<ol>
+<li>转换的方向</li>
+<li>元素是普通类对象还是Primitive类型</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/02/25/Java-Collection%E4%B8%8EArray%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/24/%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8FII/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -173,9 +262,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-02-24 11:34:21 / Modified: 12:26:57" itemprop="dateCreated datePublished" datetime="2023-02-24T11:34:21+08:00">2023-02-24</time>
+              <time title="Created: 2023-02-24 11:34:21" itemprop="dateCreated datePublished" datetime="2023-02-24T11:34:21+08:00">2023-02-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-02-25 01:26:36" itemprop="dateModified" datetime="2023-02-25T01:26:36+08:00">2023-02-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
             </span>
 
           
@@ -191,19 +295,14 @@
       
           <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>爱丽丝和鲍勃继续他们的石子游戏。许多堆石子 排成一行，每堆都有正整数颗石子<code>piles[i]</code>。游戏以谁手中的石子最多来决出胜负。<br>爱丽丝和鲍勃轮流进行，爱丽丝先开始。最初，M = 1。<br>在每个玩家的回合中，该玩家可以拿走剩下的前<code>X</code>堆的所有石子，其中<code>1&lt;=X&lt;=2M</code>。然后，令<code>M = max(M, X)</code>。游戏一直持续到所有石子都被拿走。</p>
 <p>假设爱丽丝和鲍勃都发挥出最佳水平，返回爱丽丝可以得到的最大数量的石头。</p>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ol>
-<li>为什么不能每次拿走最大的。第一，每次拿走最大的堆，会导致下一次对手能拿走更多的堆；第二，拿走了更多的堆不意味着这些堆中石子数量多，可能别人一堆顶你拿的一伯堆。所以，每次拿多少堆需要仔细考量。</li>
-<li>要求每个人都发挥最佳水平，这其实简化了题目的难度，我们可以设定一个函数dfs来计算某人先手的最多能拿走多少。</li>
-<li>进一步，如果相求Alice的发挥水平，我们就要在所有可能的取法中尝试：拿走每种取法下，对手发挥最好能拿多少，综合比较后，选择对手发挥最佳但是能拿做少的解法。</li>
-<li>结合2、3两点，我们得出下面的公式：</li>
-</ol>
-<script type="math/tex; mode=display">
-d f s(i, m)=\max \left(\sum_{j=i}^{i+x^{-1}} \operatorname{piles}[j]-d f s(i+x, \max (x, m))\right), x \in[1,2 \times m]</script><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">int</span>[] suffixSum;</span><br><span class="line">    Integer[][] cache;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">stoneGameII</span><span class="params">(<span class="type">int</span>[] piles)</span> &#123;</span><br><span class="line">        n = piles.length;</span><br><span class="line">        suffixSum = <span class="keyword">new</span> <span class="title class_">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=n-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            suffixSum[i] = suffixSum[i+<span class="number">1</span>]+piles[i];</span><br><span class="line">        &#125;</span><br><span class="line">        cache = <span class="keyword">new</span> <span class="title class_">Integer</span>[n][n+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">return</span> dfs(<span class="number">0</span>,<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> idx,<span class="type">int</span> m)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(idx&gt;=n) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(idx+<span class="number">2</span>*m&gt;=n) <span class="keyword">return</span> suffixSum[idx];</span><br><span class="line">        <span class="keyword">if</span>(cache[idx][m] == <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">minStone</span> <span class="operator">=</span> Integer.MAX_VALUE;</span><br><span class="line">            <span class="comment">//递推公式</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> x=<span class="number">1</span>;x&lt;=<span class="number">2</span>*m;x++)&#123;</span><br><span class="line">                minStone = Math.min(minStone,dfs(idx+x,Math.max(x,m)));</span><br><span class="line">            &#125;</span><br><span class="line">            cache[idx][m] = suffixSum[idx]-minStone;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cache[idx][m];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>最近有些浮躁，这题从看明白题目，到看明白解析，再到写出代码花了许久。算法是思维的拓展，可以享受ac的成就，但不可急功近利。刷题不是拧螺丝，看重的不是数量而是思维的升华。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/stone-game-ii">https://leetcode.cn/problems/stone-game-ii</a></p>
-<p><code>lghh</code>的题解地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/stone-game-ii/solution/javahua-fan-wei-jian-ji-yi-hua-sou-suo-h-8d26/">https://leetcode.cn/problems/stone-game-ii/solution/javahua-fan-wei-jian-ji-yi-hua-sou-suo-h-8d26/</a></p>
-<p>官方题解地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/stone-game-ii/solution/shi-zi-you-xi-ii-by-leetcode-solution-3pwv/">https://leetcode.cn/problems/stone-game-ii/solution/shi-zi-you-xi-ii-by-leetcode-solution-3pwv/</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/02/24/%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8FII/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -351,13 +450,21 @@ d f s(i, m)=\max \left(\sum_{j=i}^{i+x^{-1}} \operatorname{piles}[j]-d f s(i+x, 
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -393,6 +500,26 @@ d f s(i, m)=\max \left(\sum_{j=i}^{i+x^{-1}} \operatorname{piles}[j]-d f s(i+x, 
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -406,6 +533,8 @@ d f s(i, m)=\max \left(\sum_{j=i}^{i+x^{-1}} \operatorname{piles}[j]-d f s(i+x, 
   </div>
 
   
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
