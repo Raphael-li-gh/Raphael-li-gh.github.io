@@ -20,28 +20,33 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ansible">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="题目爱丽丝和鲍勃继续他们的石子游戏。许多堆石子 排成一行，每堆都有正整数颗石子piles[i]。游戏以谁手中的石子最多来决出胜负。爱丽丝和鲍勃轮流进行，爱丽丝先开始。最初，M &#x3D; 1。在每个玩家的回合中，该玩家可以拿走剩下的前X堆的所有石子，其中1&lt;&#x3D;X&lt;&#x3D;2M。然后，令M &#x3D; max(M, X)。游戏一直持续到所有石子都被拿走。 假设爱丽丝和鲍勃都发挥出最佳水平，返回爱丽丝可以得到的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="石子游戏II">
+<meta property="og:url" content="http://example.com/2023/02/24/%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8FII/index.html">
 <meta property="og:site_name" content="Ansible">
+<meta property="og:description" content="题目爱丽丝和鲍勃继续他们的石子游戏。许多堆石子 排成一行，每堆都有正整数颗石子piles[i]。游戏以谁手中的石子最多来决出胜负。爱丽丝和鲍勃轮流进行，爱丽丝先开始。最初，M &#x3D; 1。在每个玩家的回合中，该玩家可以拿走剩下的前X堆的所有石子，其中1&lt;&#x3D;X&lt;&#x3D;2M。然后，令M &#x3D; max(M, X)。游戏一直持续到所有石子都被拿走。 假设爱丽丝和鲍勃都发挥出最佳水平，返回爱丽丝可以得到的">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-24T03:34:21.000Z">
+<meta property="article:modified_time" content="2023-02-24T04:26:57.112Z">
 <meta property="article:author" content="Raphael Li">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/02/24/%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8FII/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Ansible</title>
+  <title>石子游戏II | Ansible</title>
   
 
 
@@ -144,9 +149,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -162,10 +168,9 @@
       <meta itemprop="name" content="Ansible">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/24/%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8FII/" class="post-title-link" itemprop="url">石子游戏II</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          石子游戏II
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -189,7 +194,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>爱丽丝和鲍勃继续他们的石子游戏。许多堆石子 排成一行，每堆都有正整数颗石子<code>piles[i]</code>。游戏以谁手中的石子最多来决出胜负。<br>爱丽丝和鲍勃轮流进行，爱丽丝先开始。最初，M = 1。<br>在每个玩家的回合中，该玩家可以拿走剩下的前<code>X</code>堆的所有石子，其中<code>1&lt;=X&lt;=2M</code>。然后，令<code>M = max(M, X)</code>。游戏一直持续到所有石子都被拿走。</p>
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>爱丽丝和鲍勃继续他们的石子游戏。许多堆石子 排成一行，每堆都有正整数颗石子<code>piles[i]</code>。游戏以谁手中的石子最多来决出胜负。<br>爱丽丝和鲍勃轮流进行，爱丽丝先开始。最初，M = 1。<br>在每个玩家的回合中，该玩家可以拿走剩下的前<code>X</code>堆的所有石子，其中<code>1&lt;=X&lt;=2M</code>。然后，令<code>M = max(M, X)</code>。游戏一直持续到所有石子都被拿走。</p>
 <p>假设爱丽丝和鲍勃都发挥出最佳水平，返回爱丽丝可以得到的最大数量的石头。</p>
 <h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ol>
 <li>为什么不能每次拿走最大的。第一，每次拿走最大的堆，会导致下一次对手能拿走更多的堆；第二，拿走了更多的堆不意味着这些堆中石子数量多，可能别人一堆顶你拿的一伯堆。所以，每次拿多少堆需要仔细考量。</li>
@@ -204,88 +209,33 @@ d f s(i, m)=\max \left(\sum_{j=i}^{i+x^{-1}} \operatorname{piles}[j]-d f s(i+x, 
 <p><code>lghh</code>的题解地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/stone-game-ii/solution/javahua-fan-wei-jian-ji-yi-hua-sou-suo-h-8d26/">https://leetcode.cn/problems/stone-game-ii/solution/javahua-fan-wei-jian-ji-yi-hua-sou-suo-h-8d26/</a></p>
 <p>官方题解地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/stone-game-ii/solution/shi-zi-you-xi-ii-by-leetcode-solution-3pwv/">https://leetcode.cn/problems/stone-game-ii/solution/shi-zi-you-xi-ii-by-leetcode-solution-3pwv/</a></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/10/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Raphael Li">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ansible">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/10/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2023-02-10 19:41:02 / Modified: 20:19:44" itemprop="dateCreated datePublished" datetime="2023-02-10T19:41:02+08:00">2023-02-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/02/10/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -338,6 +288,7 @@ d f s(i, m)=\max \left(\sum_{j=i}^{i+x^{-1}} \operatorname{piles}[j]-d f s(i+x, 
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text">思考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="nav-number">4.</span> <span class="nav-text">碎碎念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
